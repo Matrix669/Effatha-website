@@ -21,4 +21,4 @@ Strona dla wspólnoty Effatha z Gliwic. Póki co jest w budowie więc jeszcze tr
 
 ### Problem:
 - zaimportowanie lokalnych czcionek
-- były problemy z ustawieniem tych kosmetycznych divów (gradienty). Trzeba było trochę popracować z odpowiednich umiejscowieniem i szerokością jak i wysokością
+- były problemy z ustawieniem tych kosmetycznych divów (gradienty). Trzeba było trochę popracować z odpowiednim ich umiejscowieniem, szerokością jak i wysokością
