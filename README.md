@@ -17,7 +17,10 @@ Strona dla wspólnoty Effatha z Gliwic. Póki co jest w budowie więc jeszcze tr
 - jeszcze lepiej zacządzać gulpem (kit)
 - tworzyć reusable komponenty w scss jak nav czy footer
 - odpowiednio rozdrabniać plik scss na komponenty
-- korzystać z gita
+- korzystać z gita:
+  - git add/commit
+  - git push -u origin master
+- dodać repo za pomocą ssh
 
 ### Problem:
 - zaimportowanie lokalnych czcionek
