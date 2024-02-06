@@ -1,0 +1,692 @@
+@use 'colors' as *;
+@use 'components' as *;
+@use 'resetstyles' as *;
+@use 'fonts' as *;
+
+//notatki: pobrać fonty
+// jeśli zmienię nava na position fixed to: .header margin top 5em, dać na header section-padding, usunąć padding z headera
+
+// ===== HEADER =====
+.header {
+	position: relative;
+	background-image: url('../../dist/img/header\ z\ tłem\ na\ mobile.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 2em 2em;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	&-title {
+		font-family: 'Yeseva One', sans-serif;
+		color: $headingAndBtnText;
+		margin-bottom: 0.8em;
+		font-weight: 400;
+	}
+	&-container {
+		&-text {
+			margin-bottom: 2em;
+		}
+		&-text1,
+		&-text2 {
+			margin-bottom: 1em;
+		}
+	}
+	&--icons {
+		margin-top: 1em;
+	}
+	.fa-instagram,
+	.fa-square-facebook,
+	.fa-tiktok {
+		font-size: 2rem;
+		padding: 0.5em;
+		color: $headingAndBtnText;
+		cursor: pointer;
+		&:hover {
+			color: $dateAndSquare;
+		}
+	}
+
+	&-img-right {
+		display: none;
+	}
+}
+
+// ===== MAIN =====
+
+// ===== EVENTS =====
+.events {
+	position: relative;
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.2em;
+		&-img {
+			margin-left: -1em;
+			width: 25px;
+		}
+		&-text {
+			margin-left: 0.5em;
+		}
+	}
+	&__slider {
+		&-container {
+			&-box {
+				&:last-child {
+					display: none;
+				}
+				&--img {
+					width: 100%;
+					max-width: 600px;
+				}
+				&-text {
+					margin: 0.5em 0;
+					&--heading {
+						color: $headingAndBtnText;
+						font-weight: bold;
+						margin-bottom: 0.5em;
+					}
+					&--date {
+						color: $dateAndSquare;
+						font-size: 1.5rem;
+						margin-bottom: 0.5em;
+					}
+					&-description {
+						color: $carouselTextSection;
+						margin-bottom: 1em;
+						width: 90%;
+					}
+					&--btn {
+						border: none;
+						background: none;
+						padding: 0.6em 1.2em;
+						color: $headingAndBtnText;
+						font-weight: bold;
+						cursor: pointer;
+						a {
+							font-family: 'Montserrat', sans-serif;
+							font-size: 1.4rem;
+							font-weight: bold;
+							color: $headingAndBtnText;
+							margin-right: 0.2em;
+						}
+						&:hover a,
+						&:hover i {
+							color: $dateAndSquare;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-movement-signs {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 2em;
+		&--btn {
+			border: none;
+			background-color: $bgcAndText;
+			color: $headingAndBtnText;
+			padding: 1em;
+			border-radius: 10px 0;
+			box-shadow: -10px 25px 60px -10px;
+			font-size: 1.8rem;
+			transition: box-shadow 0.3s, color 0.3s;
+			cursor: pointer;
+			&:hover {
+				color: $dateAndSquare;
+				box-shadow: -10px 25px 50px 5px;
+			}
+		}
+		&-box {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 200px;
+			&--square {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $dateAndSquare;
+				width: 6px;
+				height: 6px;
+				margin: 0.2em;
+				cursor: pointer;
+				span {
+					padding: 0.5em;
+				}
+			}
+			.active-square {
+				background-color: $headingAndBtnText;
+			}
+		}
+	}
+}
+
+// ===== MEETUS =====
+.meet-us {
+	position: relative;
+	background-image: $sectionGradientToLeft;
+	&__box-imgs {
+		display: none;
+	}
+	&__infos {
+		&-section-info {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1em;
+			&-puzzel {
+				width: 25px;
+				margin-bottom: 1em;
+				transform: rotate(120deg);
+			}
+		}
+		&-text {
+			margin-bottom: 2em;
+		}
+		&-text1 {
+			color: $textSectionAndNavLinks;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+// ===== FIND THE TRUTH =====
+.find-the-truth {
+	position: relative;
+	&__infos {
+		margin-bottom: 2em;
+		&--title {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1em;
+			&-img {
+				width: 25px;
+				margin: 2em 0 0 -1em;
+				transform: rotate(329deg) scaleY(-1);
+			}
+		}
+		&-text1 {
+			color: $textSectionAndNavLinks;
+			margin-bottom: 1em;
+		}
+	}
+
+	&-container-squares {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		&-bigBox {
+			&:first-child &--box_imgBox--sign {
+				border-radius: 0 0 50px 0; //wiara w Boga + przynależność
+			}
+			&:last-child &--box_imgBox--sign {
+				border-radius: 0 0 0 50px; //kościół + uwielbienie
+			}
+			&--box {
+				margin: 1.5em 0;
+				&-title {
+					color: $headingAndBtnText;
+					margin-top: 0.5em;
+					font-weight: bold;
+				}
+
+				&:nth-child(2) &_imgBox--sign {
+					border-radius: 0 50px 0 0; //przynależność i uwielbienie
+				}
+				&_imgBox {
+					&--sign {
+						width: 200px;
+						height: 130px;
+						padding: 2em 4em;
+						background-color: $bgcAndText;
+						object-fit: contain;
+					}
+				}
+			}
+		}
+	}
+	.section-background-gradient {
+		height: 35%;
+	}
+}
+
+// ===== IMPORTANT PUZZLE =====
+.important-puzzle {
+	background-image: $sectionGradientToRight;
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		&--img {
+			width: 100%;
+			max-width: 300px;
+		}
+		&-text {
+			margin-bottom: 2em;
+			&--heading {
+				display: flex;
+				align-items: center;
+				&-img {
+					transform: rotate(74deg) scaleX(-1);
+					margin: 0 0 1em 0.5em;
+					width: 25px;
+				}
+			}
+			&--info {
+				margin-top: 1em;
+			}
+		}
+		&--btn {
+			&-inside {
+				color: $headingAndBtnText;
+				border: none;
+				border-bottom-right-radius: 20px;
+				background: none;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: bold;
+				padding: 1em 1.5em;
+				background-color: $bgcAndText;
+				box-shadow: 0px 20px 20px 0px rgba(88, 140, 127, 0.2);
+				transition: background-color 0.3s;
+				cursor: pointer;
+				.fa-arrow-right-long {
+					font-size: 1.6rem;
+					margin-left: 0.5em;
+					color: $headingAndBtnText;
+				}
+			}
+			&:hover {
+				outline: 1px solid $headingAndBtnText;
+			}
+		}
+	}
+}
+
+// ===== MEDIA =====
+
+@media (min-width: 414px) {
+	.nav {
+		&-mobile-ul {
+			&-text {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	.header {
+		&-title {
+			font-size: 3.4rem;
+		}
+	}
+	.find-the-truth {
+		&-container-squares {
+			&-bigBox {
+				&--box {
+					&_imgBox {
+						&--sign {
+							width: 250px;
+							height: 150px;
+							margin: 1.5em 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.nav {
+		padding: 1em 5%;
+		&-mobile-ul-li-link {
+			font-size: 2.6rem;
+		}
+	}
+	.footer {
+		&__container {
+			&--links {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				&-link {
+					margin: 0 0.5em;
+					&::before {
+						position: absolute;
+						content: '';
+						height: 15px;
+						width: 2px;
+						background-color: $bgcAndText;
+						right: 0;
+						top: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&-mobile-ul {
+			&-text {
+				display: none;
+			}
+		}
+		&-info__logoBtn-text {
+			display: block;
+			margin: 0 0.5em;
+			text-align: center;
+		}
+	}
+	.header {
+		background-image: $sectionGradientToRight;
+		&-title {
+			font-size: 3.6rem;
+		}
+		&-section {
+			display: flex;
+			align-items: center;
+		}
+		&-img-right {
+			display: block;
+			img {
+				width: 400px;
+			}
+		}
+	}
+
+	.events {
+		&__slider {
+			&-container {
+				display: flex;
+				&-box {
+					flex: 1;
+					margin: 0.2em 0.5em;
+					&:last-child {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.meet-us {
+		&-container {
+			display: flex;
+			align-items: center;
+		}
+		&__infos {
+			margin-left: 3em;
+		}
+		&__box-imgs {
+			display: block;
+			position: relative;
+			top: -100px;
+			margin: 0 10%;
+			&-img {
+				width: 260px;
+				&--small {
+					position: absolute;
+					bottom: -50%;
+					left: 20%;
+				}
+			}
+		}
+	}
+	.find-the-truth {
+		&-container-squares {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			&__double-box {
+				&-info-box {
+					&--img {
+						width: 90%;
+					}
+				}
+			}
+			&-bigBox {
+				&--box {
+					&_imgBox {
+						&--sign {
+							width: 280px;
+							height: 180px;
+						}
+					}
+				}
+			}
+		}
+		.section-background-gradient {
+			left: 25%;
+			height: 33%;
+		}
+	}
+	.important-puzzle {
+		height: 230px;
+		display: flex;
+		align-items: center;
+		padding: 2em 1em;
+		.section-padding {
+			padding: 0;
+		}
+		&__container {
+			justify-content: space-around;
+			flex-direction: row;
+			&--img {
+				width: 280px;
+				z-index: 10;
+			}
+			&-text {
+				width: 55%;
+				color: $textSectionAndNavLinks;
+				margin-bottom: 0;
+				&--info {
+					width: 85%;
+				}
+			}
+			&--btn {
+				&:hover &-inside {
+					background-color: $headingAndBtnText;
+				}
+				&:hover &-inside,
+				&:hover .fa-arrow-right-long {
+					color: $bgcAndText;
+				}
+				&:hover {
+					outline: none;
+				}
+			}
+		}
+	}
+
+	.footer {
+		padding: 2em 1em;
+		.section-padding {
+			padding: 0;
+		}
+	}
+	.btn-section {
+		&:hover &-inside {
+			background-color: $headingAndBtnText;
+			color: $bgcAndText;
+		}
+		&:hover .btn-section-inside-arrow {
+			color: $bgcAndText;
+		}
+	}
+	.section-background-gradient {
+		top: 30%;
+		left: -5%;
+		width: 70%;
+		height: 60%;
+	}
+	.section__title-text--heading {
+		font-size: 2.6rem;
+	}
+}
+@media (min-width: 992px) {
+	.header {
+		margin-top: 0;
+		&-title {
+			font-size: 4rem;
+		}
+		&-img-right {
+			img {
+				width: 500px;
+			}
+		}
+		&-container-text {
+			max-width: 90%;
+		}
+	}
+	.meet-us {
+		&__infos-text {
+			width: 90%;
+		}
+		&__box-imgs {
+			&-img {
+				width: 310px;
+				&--small {
+					width: 260px;
+					bottom: -40%;
+					left: 40%;
+				}
+			}
+		}
+	}
+	.find-the-truth {
+		display: flex;
+		align-items: center;
+		&-container-squares {
+			flex-wrap: nowrap;
+			&__double-box {
+				&-info-box {
+					margin: 1em 1em;
+					&--img {
+						width: 100%;
+					}
+				}
+			}
+		}
+		&__infos {
+			&-text {
+				width: 90%;
+			}
+		}
+	}
+	.important-puzzle {
+		height: 200px;
+		&__container {
+			&--img {
+				width: 320px;
+			}
+		}
+	}
+	.section__title-text--heading {
+		font-size: 3.4rem;
+	}
+}
+@media (min-width: 1200px) {
+	.nav {
+		&-info__logoBtn--btn,
+		&-mobile-ul {
+			display: none;
+		}
+		&-desktop-ul {
+			display: flex;
+			list-style-type: none;
+			&-li {
+				padding: 1em;
+				&-link {
+					position: relative;
+					padding-bottom: 0.2em;
+					font-size: 1.4rem;
+					color: $textSectionAndNavLinks;
+					text-decoration: none;
+					&::after,
+					&::before {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						height: 2px;
+						width: 0;
+						background-color: $headingAndBtnText;
+						transition: width 0.3s;
+					}
+					&::before {
+						left: 50%;
+					}
+					&::after {
+						right: 50%;
+					}
+					&:hover::before,
+					&:hover::after {
+						width: 10px;
+					}
+				}
+			}
+		}
+	}
+	.header {
+		&-title {
+			font-size: 4.4rem;
+		}
+		&-img-right {
+			img {
+				width: 550px;
+			}
+		}
+	}
+	.events {
+		.section-background-gradient {
+			left: -20%;
+		}
+	}
+	.meet-us {
+		&__box-imgs {
+			&-img {
+				width: 310px;
+				&--big {
+					width: 360px;
+				}
+			}
+		}
+	}
+	.important-puzzle {
+		&__container {
+			&--img {
+				width: 350px;
+				max-width: none;
+			}
+		}
+	}
+	.section__title-text--heading {
+		font-size: 4rem;
+	}
+}
+
+@media (min-width: 1250px) {
+	.nav {
+		&-desktop-ul-li-link {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.nav {
+		padding: 1em 10%;
+	}
+	.header {
+		&-title {
+			font-size: 5rem;
+		}
+		&-img-right {
+			img {
+				width: 650px;
+			}
+		}
+	}
+}
