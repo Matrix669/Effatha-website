@@ -13,7 +13,8 @@
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	padding: 2em 2em;
+	padding: 2em;
+	margin-top: 5em;
 	height: 100%;
 	width: 100%;
 	z-index: 0;
@@ -528,7 +529,6 @@
 }
 @media (min-width: 992px) {
 	.header {
-		margin-top: 0;
 		&-title {
 			font-size: 4rem;
 		}
