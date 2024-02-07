@@ -134,7 +134,7 @@
 			cursor: pointer;
 			&:hover {
 				color: $dateAndSquare;
-				box-shadow: -10px 25px 50px 5px;
+				box-shadow: -10px 25px 60px 3px;
 			}
 		}
 		&-box {
@@ -213,9 +213,9 @@
 
 	&-container-squares {
 		display: flex;
-		align-items: center;
-		flex-direction: column;
+		justify-content: center;
 		text-align: center;
+		gap: 0.5em;
 		&-bigBox {
 			&:first-child &--box_imgBox--sign {
 				border-radius: 0 0 50px 0; //wiara w Boga + przynależność
@@ -226,6 +226,7 @@
 			&--box {
 				margin: 1.5em 0;
 				&-title {
+					font-size: 1.4rem;
 					color: $headingAndBtnText;
 					margin-top: 0.5em;
 					font-weight: bold;
@@ -235,18 +236,25 @@
 					border-radius: 0 50px 0 0; //przynależność i uwielbienie
 				}
 				&_imgBox {
+					transition: transform 0.3s;
 					&--sign {
-						width: 200px;
-						height: 130px;
-						padding: 2em 4em;
+						min-width: 100%;
+						height: 60px;
+						padding: 1em 2em;
 						background-color: $bgcAndText;
 						object-fit: contain;
+					}
+					&:hover {
+						transform: scale(1.15);
 					}
 				}
 			}
 		}
 	}
 	.section-background-gradient {
+		top: auto;
+		bottom: 10%;
+		left: 15%;
 		height: 35%;
 	}
 }
@@ -305,6 +313,14 @@
 }
 
 // ===== MEDIA =====
+@media (min-width: 375px) {
+	.find-the-truth {
+		&-container-squares-bigBox--box_imgBox--sign {
+			width: 130px;
+			height: 75px;
+		}
+	}
+}
 
 @media (min-width: 414px) {
 	.nav {
@@ -320,18 +336,9 @@
 		}
 	}
 	.find-the-truth {
-		&-container-squares {
-			&-bigBox {
-				&--box {
-					&_imgBox {
-						&--sign {
-							width: 250px;
-							height: 150px;
-							margin: 1.5em 1em;
-						}
-					}
-				}
-			}
+		&-container-squares-bigBox--box_imgBox--sign {
+			width: 140px;
+			height: 80px;
 		}
 	}
 }
@@ -435,24 +442,15 @@
 	}
 	.find-the-truth {
 		&-container-squares {
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: center;
-			&__double-box {
-				&-info-box {
-					&--img {
-						width: 90%;
-					}
+			gap: 1em;
+			&-bigBox--box_imgBox {
+				&--sign {
+					width: 250px;
+					height: 125px;
+					padding: 1.5em 3em;
 				}
-			}
-			&-bigBox {
-				&--box {
-					&_imgBox {
-						&--sign {
-							width: 280px;
-							height: 180px;
-						}
-					}
+				&:hover {
+					transform: scale(1.1);
 				}
 			}
 		}
@@ -557,20 +555,18 @@
 		display: flex;
 		align-items: center;
 		&-container-squares {
-			flex-wrap: nowrap;
-			&__double-box {
-				&-info-box {
-					margin: 1em 1em;
-					&--img {
-						width: 100%;
-					}
-				}
+			&-bigBox--box-title {
+				font-size: 1.6rem;
 			}
 		}
 		&__infos {
 			&-text {
 				width: 90%;
 			}
+		}
+		.section-background-gradient {
+			transform: rotate(150deg);
+			bottom: 15%;
 		}
 	}
 	.important-puzzle {
@@ -649,6 +645,13 @@
 					width: 360px;
 				}
 			}
+		}
+	}
+	.find-the-truth {
+		&-container-squares-bigBox--box_imgBox--sign {
+			width: 280px;
+			height: 180px;
+			padding: 3em 6em;
 		}
 	}
 	.important-puzzle {
