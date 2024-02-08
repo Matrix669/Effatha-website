@@ -75,7 +75,6 @@
 				}
 				&--img {
 					width: 100%;
-					max-width: 600px;
 				}
 				&-text {
 					margin: 0.5em 0;
@@ -243,6 +242,7 @@
 						padding: 1em 2em;
 						background-color: $bgcAndText;
 						object-fit: contain;
+						box-shadow: 8px 7px 30px 2px #00000017;
 					}
 					&:hover {
 						transform: scale(1.15);
@@ -468,18 +468,18 @@
 			padding: 0;
 		}
 		&__container {
-			justify-content: space-around;
+			justify-content: space-evenly;
 			flex-direction: row;
 			&--img {
 				width: 280px;
 				z-index: 10;
 			}
 			&-text {
-				width: 55%;
+				width: 50%;
 				color: $textSectionAndNavLinks;
 				margin-bottom: 0;
 				&--info {
-					width: 85%;
+					width: 90%;
 				}
 			}
 			&--btn {
@@ -651,7 +651,7 @@
 		&-container-squares-bigBox--box_imgBox--sign {
 			width: 280px;
 			height: 180px;
-			padding: 3em 6em;
+			padding: 2.5em 4em;
 		}
 	}
 	.important-puzzle {

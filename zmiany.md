@@ -19,4 +19,21 @@ telefony:
 - gradient w findTheTruth - bardziej na kafelki, żeby było je widać. Jeśli się nie uda to dać cień na nie ✔
 - hover na kafelki - transform scale ✔
 - zmienić linki
-- hamburger zmieniający się w krzyż
+- hamburger zmieniający się w krzyż ✔
+- wrapper: max-width: 1400px
+- =====important puzzle ✔
+    @media (min-width: 768px)
+    .important-puzzle__container-text--info {
+        width: 90%;
+    }
+    @media (min-width: 768px)
+    .important-puzzle__container {
+        justify-content: space-evenly;
+    }
+    .important-puzzle__container-text {
+        width: 50%;
+    }
+    ====events
+    .events__slider-container-box--img {
+        width: 100%;
+    }
