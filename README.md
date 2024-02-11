@@ -23,5 +23,5 @@ Strona dla wspólnoty Effatha z Gliwic. Póki co jest w budowie więc jeszcze tr
 - dodać repo za pomocą ssh
 
 ### Problem:
-- zaimportowanie lokalnych czcionek
+- zaimportowanie lokalnych czcionek - ogarnięte ✔
 - były problemy z ustawieniem tych kosmetycznych divów (gradienty). Trzeba było trochę popracować z odpowiednim ich umiejscowieniem, szerokością jak i wysokością
