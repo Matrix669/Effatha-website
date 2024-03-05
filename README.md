@@ -9,7 +9,7 @@ Uruchomienie strony:
 # Moje przemyślenia
 ### Opis
 Strona dla wspólnoty Effatha z Gliwic. Póki co jest w budowie więc jeszcze trochę rzeczy brakuje. Później będzie on przerabiana na szablon za pomocą funkcji z php.
-### Do zmiany:
+
 
 ### Nauczyłem się:
 - odpowiednio dodawać wrappery. To znaczy, że jeśli sekcja ma nadany jakiś background to niekoliduje to z wrapperem. Jest na całej szerokości, a później jest treść
