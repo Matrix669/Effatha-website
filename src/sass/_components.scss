@@ -35,6 +35,34 @@
 	color: $sectionInfo;
 }
 
+.section--white-btn {
+	&-inside {
+		color: $headingAndBtnText;
+		border: none;
+		border-bottom-right-radius: 20px;
+		background: none;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		padding: 1em 1.5em;
+		background-color: $bgcAndText;
+		box-shadow: 0px 20px 20px 0px rgba(88, 140, 127, 0.2);
+		transition: background-color 0.3s;
+		cursor: pointer;
+		.fa-arrow-right-long {
+			font-size: 1.6rem;
+			margin-left: 0.5em;
+			color: $headingAndBtnText;
+		}
+	}
+	&:hover {
+		outline: 1px solid $headingAndBtnText;
+	}
+}
+
+.section--white-btn.btnwhite1 {
+	display: none;
+}
+
 .btn-section {
 	display: inline-block;
 	&-inside {
@@ -59,6 +87,7 @@
 		background-color: $bgcAndText;
 	}
 }
+
 
 .section-background-gradient {
 	position: absolute;
@@ -155,18 +184,37 @@
 		flex-direction: column;
 		list-style-type: none;
 		&-li {
-			margin: 1em;
+			margin: .5em;
 			padding: 1em;
 			&-link {
 				text-decoration: none;
 				color: $bgcAndText;
-				font-size: 2.2rem;
+				font-size: 2rem;
 				&:hover {
 					color: $sectionInfo;
 				}
 				.fa-chevron-down {
 					font-size: 1.4rem;
 				}
+			}
+
+			&__dropdown {
+				display: none;
+				padding: 0.5em;
+				margin-top: 0.5em;
+				& li {
+					padding: 0.5em 0;
+					& a {
+						text-decoration: none;
+						color: $bgcAndText;
+						&:hover {
+							color: $sectionInfo;
+						}
+					}
+				}
+			}
+			.active--dropdown-menu {
+				display: block;
 			}
 		}
 		&-text {
@@ -185,6 +233,36 @@
 		display: none;
 	}
 }
+
+.important-puzzle {
+	background-image: $sectionGradientToRight;
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		&--img {
+			width: 100%;
+			max-width: 300px;
+		}
+		&-text {
+			margin-bottom: 2em;
+			&--heading {
+				display: flex;
+				align-items: center;
+				&-img {
+					transform: rotate(74deg) scaleX(-1);
+					margin: 0 0 1em 0.5em;
+					width: 25px;
+				}
+			}
+			&--info {
+				margin-top: 1em;
+			}
+		}
+	}
+}
+
 .footer {
 	position: relative;
 	background-color: $headingAndBtnText;

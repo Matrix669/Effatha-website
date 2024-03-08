@@ -20,9 +20,11 @@
         <div class="nav-info">
             <div class="nav-info__logoBtn">
                 <a href="#">
-                    <img class="nav-info__logoBtn-logo " src="./dist/img/logo.svg" alt="zielone logo effatha - zielony puzzel z napisem 'effatha'">
+                    <img class="nav-info__logoBtn-logo " src="./dist/img/logo.svg"
+                        alt="zielone logo effatha - zielony puzzel z napisem 'effatha'">
                 </a>
-                <p class="nav-info__logoBtn-text">Poniedziałki, 19:00 - Centrum Edukacyjne św. Jana Pawła II, Gliwice</p>
+                <p class="nav-info__logoBtn-text">Poniedziałki, 19:00 - Centrum Edukacyjne św. Jana Pawła II, Gliwice
+                </p>
                 <button class="nav-info__logoBtn--btn">
                     <div class="nav-info__logoBtn--btn-line"></div>
                 </button>
@@ -30,14 +32,19 @@
                     <li class="nav-desktop-ul-li">
                         <a class="nav-desktop-ul-li-link" href="#">start</a>
                     </li>
-                    <li class="nav-desktop-ul-li">
+                    <li class="nav-desktop-ul-li link-desktop-aboutus">
                         <a class="nav-desktop-ul-li-link" href="#">o nas <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="nav-desktop-ul-li__dropdown">
+                            <li><a class="nav-desktop-ul-li__dropdown--link" href="#">wizja</a></li>
+                            <li><a class="nav-desktop-ul-li__dropdown--link" href="#">działalność</a></li>
+                            <li><a class="nav-desktop-ul-li__dropdown--link" href="#">liderzy</a></li>
+                        </ul>
                     </li>
                     <li class="nav-desktop-ul-li">
                         <a class="nav-desktop-ul-li-link" href="#events">wydarzenia</a>
                     </li>
                     <li class="nav-desktop-ul-li">
-                        <a class="nav-desktop-ul-li-link" href="#">wsparcie</a>
+                        <a class="nav-desktop-ul-li-link" href="#important-puzzle">wsparcie</a>
                     </li>
                     <li class="nav-desktop-ul-li">
                         <a class="nav-desktop-ul-li-link" href="./podstrony/kontakt/index.html">kontakt</a>
@@ -45,20 +52,25 @@
                 </ul>
             </div>
         </div>
-    
+
         <ul class="nav-mobile-ul">
             <p class="nav-mobile-ul-text">Poniedziałki, 19:00 - Centrum Edukacyjne św. Jana Pawła II, Gliwice</p>
             <li class="nav-mobile-ul-li">
                 <a class="nav-mobile-ul-li-link" href="#">start</a>
             </li>
             <li class="nav-mobile-ul-li">
-                <a class="nav-mobile-ul-li-link" href="#">o nas <i class="fa-solid fa-chevron-down"></i></a>
+                <a class="nav-mobile-ul-li-link link-hover--aboutus" href="#">o nas <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="nav-mobile-ul-li__dropdown">
+                    <li class="nav-mobile-ul-li__dropdown--li"><a href="#">wizja</a></li>
+                    <li class="nav-mobile-ul-li__dropdown--li"><a href="#">działalność</a></li>
+                    <li class="nav-mobile-ul-li__dropdown--li"><a href="#">liderzy</a></li>
+                </ul>
             </li>
             <li class="nav-mobile-ul-li">
                 <a class="nav-mobile-ul-li-link" href="#events">wydarzenia</a>
             </li>
             <li class="nav-mobile-ul-li">
-                <a class="nav-mobile-ul-li-link" href="#">wsparcie</a>
+                <a class="nav-mobile-ul-li-link" href="#important-puzzle">wsparcie</a>
             </li>
             <li class="nav-mobile-ul-li">
                 <a class="nav-mobile-ul-li-link" href="./podstrony/kontakt/index.html">kontakt</a>
@@ -77,9 +89,10 @@
                     ullamcorper.</p>
             </div>
             <a class="btn-section" href="#">
-                <button type="button" class="btn-section-inside"> Co u nas znajdziesz<i class="btn-section-inside-arrow fa-solid fa-arrow-right-long"></i></button>
+                <button type="button" class="btn-section-inside"> Co u nas znajdziesz<i
+                        class="btn-section-inside-arrow fa-solid fa-arrow-right-long"></i></button>
             </a>
-            
+
             <div class="header--icons">
                 <a target="_blank" href="https://www.instagram.com/effatha_gliwice/"><i
                         class="fa-brands fa-instagram"></i></a>
@@ -103,6 +116,10 @@
             <p class="section__title-text--info">Wydarzenia</p>
             <h2 class="section__title-text--heading left-bottom-line-heading">Co się u nas dzieje</h2>
         </div>
+        <a href="#" class="section--white-btn btnwhite1">
+            <button type="button" class="section--white-btn-inside">Zobacz więcej <i
+                    class="fa-solid fa-arrow-right-long"></i></button>
+        </a>
     </div>
     <div class="events__slider">
         <div class="events__slider-container">
@@ -131,6 +148,10 @@
                 </div>
             </div>
         </div>
+        <a href="#" class="section--white-btn">
+            <button type="button" class="section--white-btn-inside btnwhite2">Zobacz więcej <i
+                    class="fa-solid fa-arrow-right-long"></i></button>
+        </a>
         <div class="events-movement-signs">
             <button class="events-movement-signs--btn-left events-movement-signs--btn"><i
                     class="fa-solid fa-arrow-left-long"></i></button>
@@ -240,7 +261,7 @@
     </div>
     </div>
 </section>
-    <section class="important-puzzle section-padding">
+    <section id="important-puzzle" class="important-puzzle section-padding">
     <div class="wrapper">
         <div class="important-puzzle__container">
             <div class="section-background-gradient"></div>
@@ -256,8 +277,8 @@
                     suscipit elit. Suspendisse posuere sem eu quam
                     rhoncus, in imperdiet augue tincidunt. </p>
             </div>
-            <a href="#" class="important-puzzle__container--btn">
-                <button type="button" class="important-puzzle__container--btn-inside">Wesprzyj nas <i
+            <a href="./../../../podstrony/wsparcie/index.html" class="section--white-btn">
+                <button type="button" class="section--white-btn-inside">Wesprzyj nas <i
                         class="fa-solid fa-arrow-right-long"></i></button>
             </a>
         </div>
