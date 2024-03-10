@@ -88,7 +88,6 @@
 	}
 }
 
-
 .section-background-gradient {
 	position: absolute;
 	top: 20%;
@@ -100,6 +99,19 @@
 	background: rgba(88, 209, 179, 0.2);
 	filter: blur(75px);
 	z-index: -10;
+}
+
+.section__navigation {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 1.5em;
+	& a img {
+		width: 15px;
+	}
+	&--actual-place {
+		color: $headingAndBtnText;
+	}
 }
 
 .nav {
@@ -184,7 +196,7 @@
 		flex-direction: column;
 		list-style-type: none;
 		&-li {
-			margin: .5em;
+			margin: 0.5em;
 			padding: 1em;
 			&-link {
 				text-decoration: none;
@@ -231,6 +243,66 @@
 	}
 	&-desktop-ul {
 		display: none;
+	}
+}
+
+// ===== EVENTS =====
+.events {
+	&__slider {
+		.section--white-btn {
+			margin-top: 1em;
+			&-inside {
+				width: 100%;
+			}
+		}
+		&-container {
+			&-box {
+				&:last-child {
+					display: none;
+				}
+				&--img {
+					width: 100%;
+					border-bottom-right-radius: 40px;
+				}
+				&-text {
+					margin: 0.5em 0;
+					&--heading {
+						color: $headingAndBtnText;
+						font-weight: bold;
+						margin-bottom: 0.5em;
+					}
+					&--date {
+						color: $dateAndSquare;
+						font-size: 1.5rem;
+						margin-bottom: 0.5em;
+					}
+					&-description {
+						color: $carouselTextSection;
+						margin-bottom: 1em;
+						width: 90%;
+					}
+					&--btn {
+						border: none;
+						background: none;
+						padding: 0.6em 1.2em;
+						color: $headingAndBtnText;
+						font-weight: bold;
+						cursor: pointer;
+						a {
+							font-family: 'Montserrat', sans-serif;
+							font-size: 1.4rem;
+							font-weight: bold;
+							color: $headingAndBtnText;
+							margin-right: 0.2em;
+						}
+						&:hover a,
+						&:hover i {
+							color: $dateAndSquare;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 // ===== FIND THE TRUTH =====

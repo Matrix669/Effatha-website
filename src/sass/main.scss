@@ -66,62 +66,7 @@
 		&-text {
 			margin-left: 0.5em;
 		}
-	}
-	&__slider {
-		.section--white-btn {
-			margin-top: 1em;
-			&-inside {
-				width: 100%;
-			}
-		}
-		&-container {
-			&-box {
-				&:last-child {
-					display: none;
-				}
-				&--img {
-					width: 100%;
-				}
-				&-text {
-					margin: 0.5em 0;
-					&--heading {
-						color: $headingAndBtnText;
-						font-weight: bold;
-						margin-bottom: 0.5em;
-					}
-					&--date {
-						color: $dateAndSquare;
-						font-size: 1.5rem;
-						margin-bottom: 0.5em;
-					}
-					&-description {
-						color: $carouselTextSection;
-						margin-bottom: 1em;
-						width: 90%;
-					}
-					&--btn {
-						border: none;
-						background: none;
-						padding: 0.6em 1.2em;
-						color: $headingAndBtnText;
-						font-weight: bold;
-						cursor: pointer;
-						a {
-							font-family: 'Montserrat', sans-serif;
-							font-size: 1.4rem;
-							font-weight: bold;
-							color: $headingAndBtnText;
-							margin-right: 0.2em;
-						}
-						&:hover a,
-						&:hover i {
-							color: $dateAndSquare;
-						}
-					}
-				}
-			}
-		}
-	}
+	}	
 	&-movement-signs {
 		display: flex;
 		align-items: center;
