@@ -1,0 +1,44 @@
+@use '../colors' as *;
+@use '../components' as *;
+@use '../resetstyles' as *;
+@use '../main.scss' as *;
+
+.error {
+    margin-top: 5em;
+
+    &__container {
+        &--img {
+            width: 100%;
+        }
+        &--text {
+            margin-bottom: 3em;
+            
+            & p {
+                width: 255px;
+                color: $headingAndBtnText;
+                margin: .5em 0 1em 0;
+                font-weight: bold;
+            }
+            & a {
+                .section--white-btn-inside {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .error {
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            margin-top: 2em;
+            &--img {
+                width: 50%;
+            }
+        }
+    }
+}
