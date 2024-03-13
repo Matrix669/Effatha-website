@@ -36,6 +36,7 @@
 }
 
 .section--white-btn {
+	border-bottom-right-radius: 20px;
 	&-inside {
 		color: $headingAndBtnText;
 		border: none;
@@ -65,6 +66,7 @@
 
 .btn-section {
 	display: inline-block;
+	border-bottom-right-radius: 20px;
 	&-inside {
 		display: flex;
 		align-items: center;
@@ -199,6 +201,7 @@
 			margin: 0.5em;
 			padding: 1em;
 			&-link {
+				padding: 1em;
 				text-decoration: none;
 				color: $bgcAndText;
 				font-size: 2rem;
@@ -281,23 +284,26 @@
 						margin-bottom: 1em;
 						width: 90%;
 					}
+					a {
+						padding: 1em;
+						&:hover a,
+						&:hover i,
+						&:hover .events__slider-container-box-text--btn {
+							color: $dateAndSquare;
+						}
+					}
 					&--btn {
+						margin: 0.5em;
+						font-size: 1.4rem;
 						border: none;
 						background: none;
-						padding: 0.6em 1.2em;
+						padding: 0.6em 0;
 						color: $headingAndBtnText;
-						font-weight: bold;
+						font-weight: 700;
+						font-family: 'Montserrat';
 						cursor: pointer;
 						a {
-							font-family: 'Montserrat', sans-serif;
-							font-size: 1.4rem;
-							font-weight: bold;
 							color: $headingAndBtnText;
-							margin-right: 0.2em;
-						}
-						&:hover a,
-						&:hover i {
-							color: $dateAndSquare;
 						}
 					}
 				}

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navBtn = document.querySelector('.nav-info__logoBtn--btn')
     const mobileNav = document.querySelector('.nav-mobile-ul')
-    const navItems = document.querySelectorAll('.nav-mobile-ul-li')
+    const navItems = document.querySelectorAll('.nav-mobile-ul-li-link')
     const linkHoverMobileAboutus = document.querySelector('.link-hover--aboutus')
     const dropdownMenu = document.querySelector('.nav-mobile-ul-li__dropdown')
     const dropdownMenuLinks = document.querySelectorAll('.nav-mobile-ul-li__dropdown--li')
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 mobileNav.classList.remove('nav--active')
             })
         })
-        dropdownMenu.classList.remove('nav--active')
+        dropdownMenu.classList.remove('active--dropdown-menu')
     }
 
     function handleDropdownMenu() {

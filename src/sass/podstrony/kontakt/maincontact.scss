@@ -45,6 +45,7 @@
 						width: 100%;
 						padding: 1em;
 						border-radius: 10px;
+						font-size: 1.6rem;
 						border: 2px solid transparent;
 						&:focus {
 							outline: none;
@@ -53,7 +54,7 @@
 					}
 					& label {
 						position: absolute;
-						top: 30%;
+						top: 34%;
 						left: 3%;
 						padding: 0 0.5em;
 						transition: transform 0.3s;
@@ -62,7 +63,7 @@
 						pointer-events: none;
 					}
 					& input:focus ~ label {
-						transform: translateY(-120%);
+						transform: translateY(-150%);
 						color: $headingAndBtnText;
 						background-color: #d4f7ee;
 					}
@@ -137,8 +138,6 @@
 						& textarea {
 							min-height: 200px;
 						}
-						& textarea,
-						input,
 						label {
 							font-size: 1.6rem;
 						}
