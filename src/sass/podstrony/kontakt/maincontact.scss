@@ -54,7 +54,7 @@
 					}
 					& label {
 						position: absolute;
-						top: 34%;
+						top: 17px;
 						left: 3%;
 						padding: 0 0.5em;
 						transition: transform 0.3s;
@@ -65,6 +65,14 @@
 					& input:focus ~ label {
 						transform: translateY(-150%);
 						color: $headingAndBtnText;
+						background-color: #d4f7ee;
+					}
+					& input:valid ~ label {
+						transform: translateY(-150%);
+						background-color: #d4f7ee;
+					}
+					.active-email-label {
+						transform: translateY(-150%);
 						background-color: #d4f7ee;
 					}
 					& textarea {
@@ -79,32 +87,83 @@
 							color: $headingAndBtnText;
 							background-color: #d4f7ee;
 						}
+						&:valid ~ label {
+							transform: translateY(-22px);
+							background-color: #d4f7ee;
+						}
+					}
+					.error-info {
+						margin: 0.5em 0 0 0.5em;
+						color: tomato;
+						font-size: 1.4rem;
+					}
+					& .error-info {
+						visibility: hidden;
+					}
+					&.error .error-info {
+						visibility: visible;
+					}
+					&.error input,
+					&.error textarea {
+						border-color: tomato;
+						background-color: rgba(255, 99, 71, 0.34);
+					}
+					&.error label {
+						color: #000;
 					}
 				}
 			}
 
 			&__agreement {
+				&--message {
+					font-size: 1.8rem;
+					margin-top: 1em;
+					visibility: hidden;
+				}
+				
 				&--box {
 					display: flex;
-					align-items: center;
-					gap: 1em;
-					margin-bottom: 1.2em;
+					flex-direction: column;
+					align-items: flex-start;
+					&-info {
+						display: flex;
+						gap: 1em;
+					}
 					& input {
 						align-self: flex-start;
 					}
 					& input[type='checkbox'] {
-						width: 30px;
-						height: 30px;
+						width: 15px;
+						height: 15px;
 						cursor: pointer;
+					}
+					& > .error-info {
+						margin: 0.5em 0 0 0.5em;
+						color: tomato;
+						font-size: 1.4rem;
+						visibility: hidden;
+					}
+					&.error > .error-info {
+						visibility: visible;
+					}
+					&--link-privacypolicy {
+						color: $headingAndBtnText;
+					}
+					&--link-privacypolicy:hover {
+						border-bottom: 1px solid $headingAndBtnText;
 					}
 				}
 				.section--white-btn-inside {
 					width: 100%;
+					margin-top: 1.5em;
 				}
 				.section--white-btn-inside:hover {
 					outline: 1px solid $headingAndBtnText;
 				}
 			}
+		}
+		.form-message-visible {
+			visibility: visible;
 		}
 	}
 }
@@ -140,9 +199,6 @@
 						}
 						label {
 							font-size: 1.6rem;
-						}
-						& label {
-							top: 33%;
 						}
 						& input:focus ~ label {
 							transform: translateY(-140%);
