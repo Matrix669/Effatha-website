@@ -66,7 +66,7 @@
 		&-text {
 			margin-left: 0.5em;
 		}
-	}	
+	}
 	&-movement-signs {
 		display: flex;
 		align-items: center;
@@ -186,7 +186,6 @@
 
 @media (min-width: 576px) {
 	.nav {
-		padding: 1em 5%;
 		&-mobile-ul-li-link {
 			font-size: 2.6rem;
 		}
@@ -448,20 +447,19 @@
 		&-desktop-ul {
 			display: flex;
 			list-style-type: none;
+			padding: 1.2em 0;
 			&-li {
-				padding: 1em;
 				&-link,
 				&__dropdown--link {
 					position: relative;
-					padding-bottom: 0.2em;
-					font-size: 1.4rem;
+					padding: 2.2em 1em;
 					color: $textSectionAndNavLinks;
 					text-decoration: none;
 					&::after,
 					&::before {
 						content: '';
 						position: absolute;
-						bottom: 0;
+						bottom: 25px;
 						height: 2px;
 						width: 0;
 						background-color: $headingAndBtnText;
@@ -478,20 +476,27 @@
 						width: 10px;
 					}
 				}
+				&__dropdown--link::after,
+				&__dropdown--link::before {
+					bottom: 0;
+				}
 				&__dropdown {
-					display: none;
 					position: absolute;
+					top: 55px;
+					left: -5px;
+					opacity: 0;
+					transform: scaleY(0);
 					text-align: center;
-					margin-top: 1em;
-					padding: 0.5em;
 					background-color: $headingAndBtnText;
+					transform-origin: 50% 0;
+					transition: top .3s, opacity .3s, transform .3s;
 					& li {
 						margin: 0.5em 0;
 					}
 					&--link {
 						color: $bgcAndText;
 						display: block;
-						padding: 0.5em;
+						padding: 1em;
 						&::before,
 						&::after {
 							background-color: $bgcAndText;
@@ -499,7 +504,11 @@
 					}
 				}
 				.link-desktop-aboutus:hover &__dropdown {
-					display: block;
+					opacity: 1;
+					transform: scaleY(1);
+				}
+				&.link-desktop-aboutus {
+					position: relative;
 				}
 			}
 		}
@@ -558,9 +567,6 @@
 }
 
 @media (min-width: 1400px) {
-	.nav {
-		padding: 1em 10%;
-	}
 	.header {
 		&-title {
 			font-size: 5rem;

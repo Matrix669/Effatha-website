@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.querySelector('.nav')
     const navBtn = document.querySelector('.nav-info__logoBtn--btn')
     const mobileNav = document.querySelector('.nav-mobile-ul')
     const navItems = document.querySelectorAll('.nav-mobile-ul-li-link')
@@ -28,7 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
+    function addNavShadow() {
+        if(scrollY >= 100) {
+            nav.classList.add('nav-shadow')
+        } else {
+            nav.classList.remove('nav-shadow')
+        }
+    }
 
     navBtn.addEventListener('click', handleNav)
     linkHoverMobileAboutus.addEventListener('click', handleDropdownMenu)
+    window.addEventListener('scroll', addNavShadow)
 })
