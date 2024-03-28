@@ -120,7 +120,7 @@
 					margin-top: 1em;
 					visibility: hidden;
 				}
-				
+
 				&--box {
 					display: flex;
 					flex-direction: column;
@@ -128,14 +128,49 @@
 					&-info {
 						display: flex;
 						gap: 1em;
+						& label {
+							cursor: pointer;
+						}
 					}
 					& input {
 						align-self: flex-start;
 					}
 					& input[type='checkbox'] {
-						width: 15px;
-						height: 15px;
+						position: relative;
+						appearance: none;
+						background-color: $headingAndBtnText;
+						border-radius: 4px;
+						width: 20px;
+						height: 20px;
 						cursor: pointer;
+						&::after,
+						&::before {
+							position: absolute;
+							content: '';
+							background-color: $bgcAndText;
+							display: none;
+						}
+						&::after {
+							margin: 0 auto;
+							top: 2px;
+							bottom: 2px;
+							left: 47%;
+							width: 2px;
+						}
+						&::before {
+							margin: auto 0;
+							left: 2px;
+							right: 2px;
+							top: 30%;
+							height: 2px;
+						}
+						&:checked::after,
+						&:checked::before {
+							display: block;
+						}
+						&:hover {
+							background-color: #588c7faf;
+						}
 					}
 					& > .error-info {
 						margin: 0.5em 0 0 0.5em;
