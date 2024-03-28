@@ -113,6 +113,10 @@
 	}
 	&--actual-place {
 		color: $headingAndBtnText;
+		// border-bottom: 1px solid transparent;
+		// &:hover {
+		// 	border-bottom: 1px solid $headingAndBtnText;
+		// }
 	}
 }
 
@@ -402,6 +406,10 @@
 		&--img {
 			width: 100%;
 			max-width: 300px;
+			transition: transform .4s;
+			&:hover {
+				transform: rotate(40deg);
+			}
 		}
 		&-text {
 			margin-bottom: 2em;

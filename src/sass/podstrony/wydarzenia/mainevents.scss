@@ -22,25 +22,85 @@
 			}
 			&__sorting {
 				display: flex;
-				&-select {
-					border-radius: 10px;
-					border: none;
-					background-color: $bgcAndText;
-					font-size: 1.6rem;
-					font-family: 'Montserrat', sans-serif;
-					padding: 1em 0.5em;
-					color: $headingAndBtnText;
-					box-shadow: -10px 25px 60px -10px;
-					transition: box-shadow 0.3s, color 0.3s;
-					cursor: pointer;
-					&:hover {
-						color: $dateAndSquare;
-						box-shadow: -10px 25px 60px 3px;
+				align-items: center;
+				&__box-dropdown {
+					&--icon {
+						width: 50px;
+						cursor: pointer;
+						padding: 0.5em;
+						border: 1px solid transparent;
+						&:hover {
+							opacity: .6;
+						}
+						&:focus {
+							border: 1px solid $headingAndBtnText;
+						}
 					}
-					& option {
+					&-title-box {
+						display: none;
+						align-items: center;
+						gap: 1em;
+						height: 50px;
+						background-color: $bgcAndText;
 						color: $headingAndBtnText;
-						border: none;
-						font-size: 1.4rem;
+						padding: 0.5em 1em;
+						font-size: 1.6rem;
+						border-radius: 6px;
+						box-shadow: -10px 25px 60px -10px;
+						cursor: pointer;
+						transition: box-shadow 0.3s, color 0.3s;
+						cursor: pointer;
+						&:hover {
+							color: $dateAndSquare;
+							box-shadow: -10px 25px 60px 3px;
+						}
+					}
+					&--list {
+						display: flex;
+						align-items: center;
+						flex-direction: column;
+						position: absolute;
+						background-color: $bgcAndText;
+						color: $headingAndBtnText;
+						box-shadow: -10px 25px 60px -10px;
+						border-radius: 6px;
+						margin-top: 0.5em;
+						opacity: 0;
+						transform: translateY(-60px);
+						transition: opacity 0.3s, transform 0.3s;
+						z-index: -99;
+						& li {
+							position: relative;
+							color: $headingAndBtnText;
+							padding: 1em 3em;
+							border-radius: 6px;
+							cursor: pointer;
+							&::after,
+							&::before {
+								content: '';
+								position: absolute;
+								bottom: 8px;
+								height: 2px;
+								width: 0;
+								background-color: $headingAndBtnText;
+								transition: width 0.3s;
+							}
+							&::before {
+								left: 50%;
+							}
+							&::after {
+								right: 50%;
+							}
+							&:hover::before,
+							&:hover::after {
+								width: 10px;
+							}
+						}
+						&.active-dropdown-list {
+							opacity: 1;
+							transform: translateY(0);
+							z-index: 99;
+						}
 					}
 				}
 
@@ -65,13 +125,12 @@
 			gap: 20px;
 			margin-bottom: 1em;
 			.events__slider-container-box {
-				transition: transform .3s;
+				transition: transform 0.3s;
 				&:last-child {
 					display: block;
 				}
 				&--img {
 					min-height: 150px;
-					/* height: 100%; */
 					max-height: 255px;
 					object-fit: cover;
 					object-position: 50% 45%;
@@ -133,6 +192,16 @@
 @media (min-width: 576px) {
 	.blog-post {
 		&__container {
+			&--title__sorting {
+				&__box-dropdown {
+					&--icon {
+						display: none;
+					}
+					&-title-box {
+						display: flex;
+					}
+				}
+			}
 			&--posts {
 				grid-template-columns: repeat(2, 1fr); /* Dla wersji desktop */
 				grid-template-rows: repeat(8, auto);
