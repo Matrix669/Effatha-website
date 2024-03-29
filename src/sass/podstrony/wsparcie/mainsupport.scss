@@ -52,8 +52,37 @@
 			&--box_imgBox--sign {
 				border-radius: 0 !important;
 			}
+			&--box_imgBox:hover {
+				transform: scale(1.05);
+			}
 			&--box-title {
 				width: 150px;
+			}
+		}
+	}
+}
+@media (max-width: 280px) {
+	.your-support-help-us {
+		.find-the-truth-container-squares {
+			flex-wrap: wrap;
+			&-bigBox {
+				&--box_imgBox:hover {
+					transform: scale(1.15);
+				}
+				&--box_imgBox--sign {
+					height: 70px;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 375px) {
+	.your-support-help-us {
+		.find-the-truth-container-squares {
+			&-bigBox {
+				&--box_imgBox:hover {
+					transform: scale(1.15);
+				}
 			}
 		}
 	}

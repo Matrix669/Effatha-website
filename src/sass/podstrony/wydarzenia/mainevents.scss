@@ -24,16 +24,25 @@
 				display: flex;
 				align-items: center;
 				&__box-dropdown {
-					&--icon {
-						width: 50px;
-						cursor: pointer;
-						padding: 0.5em;
+					&--btn {
+						background: none;
 						border: 1px solid transparent;
-						&:hover {
-							opacity: .6;
-						}
+						border-radius: 6px;
+						padding: .5em;
 						&:focus {
 							border: 1px solid $headingAndBtnText;
+						}
+						& img {
+							width: 50px;
+							cursor: pointer;
+							padding: 0.5em;
+							border: 1px solid transparent;
+							&:hover {
+								opacity: 0.6;
+							}
+							&:focus {
+								border: 1px solid $headingAndBtnText;
+							}
 						}
 					}
 					&-title-box {
