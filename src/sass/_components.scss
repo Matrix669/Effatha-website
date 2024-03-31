@@ -36,24 +36,21 @@
 }
 
 .section--white-btn {
+	display: block;
+	text-align: center;
 	border-bottom-right-radius: 20px;
-	&-inside {
+	color: $headingAndBtnText;
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding: 1em 1.5em;
+	background-color: $bgcAndText;
+	box-shadow: 0px 20px 20px 0px rgba(88, 140, 127, 0.2);
+	transition: background-color 0.3s;
+	cursor: pointer;
+	.fa-arrow-right-long {
+		font-size: 1.6rem;
+		margin-left: 0.5em;
 		color: $headingAndBtnText;
-		border: none;
-		border-bottom-right-radius: 20px;
-		background: none;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: bold;
-		padding: 1em 1.5em;
-		background-color: $bgcAndText;
-		box-shadow: 0px 20px 20px 0px rgba(88, 140, 127, 0.2);
-		transition: background-color 0.3s;
-		cursor: pointer;
-		.fa-arrow-right-long {
-			font-size: 1.6rem;
-			margin-left: 0.5em;
-			color: $headingAndBtnText;
-		}
 	}
 	&:hover {
 		outline: 1px solid $headingAndBtnText;
@@ -66,25 +63,20 @@
 
 .btn-section {
 	display: inline-block;
+	padding: 1em 1.5em;
 	border-bottom-right-radius: 20px;
-	&-inside {
-		display: flex;
-		align-items: center;
-		padding: 1em 1.5em;
-		border-radius: 0px 0px 20px 0px;
-		border: 1px solid $headingAndBtnText;
-		background: none;
-		font-family: 'Montserrat', sans-serif;
+	border: 1px solid $headingAndBtnText;
+	font-size: 1.3rem;
+	color: $headingAndBtnText;
+	font-weight: bold;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	&-arrow {
+		font-size: 1.6rem;
+		margin-left: 0.5em;
 		color: $headingAndBtnText;
-		font-weight: bold;
-		transition: background-color 0.3s;
-		cursor: pointer;
-		&-arrow {
-			font-size: 1.6rem;
-			margin-left: 0.5em;
-			color: $headingAndBtnText;
-		}
 	}
+
 	&:hover {
 		background-color: $bgcAndText;
 	}
@@ -113,10 +105,6 @@
 	}
 	&--actual-place {
 		color: $headingAndBtnText;
-		// border-bottom: 1px solid transparent;
-		// &:hover {
-		// 	border-bottom: 1px solid $headingAndBtnText;
-		// }
 	}
 }
 
@@ -305,26 +293,17 @@
 						margin-bottom: 1em;
 						width: 90%;
 					}
-					a {
-						padding: 1em;
-						&:hover a,
-						&:hover i,
-						&:hover .events__slider-container-box-text--btn {
-							color: $dateAndSquare;
-						}
-					}
 					&--btn {
-						margin: 0.5em;
+						display: inline-block;
+						padding: 1em;
 						font-size: 1.4rem;
-						border: none;
-						background: none;
-						padding: 0.6em 0;
 						color: $headingAndBtnText;
 						font-weight: 700;
-						font-family: 'Montserrat', sans-serif;
 						cursor: pointer;
-						a {
-							color: $headingAndBtnText;
+
+						&:hover,
+						&:hover i {
+							color: $dateAndSquare;
 						}
 					}
 				}
@@ -406,7 +385,7 @@
 		&--img {
 			width: 100%;
 			max-width: 300px;
-			transition: transform .4s;
+			transition: transform 0.4s;
 			&:hover {
 				transform: rotate(20deg);
 			}

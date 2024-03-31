@@ -110,6 +110,9 @@
 			}
 		}
 	}
+	.btnwhite2 {
+		width: 100%;
+	}
 }
 
 // ===== MEETUS =====
@@ -349,24 +352,22 @@
 		}
 	}
 	.btn-section {
-		&:hover &-inside {
+		&:hover{
 			background-color: $headingAndBtnText;
 			color: $bgcAndText;
 		}
-		&:hover .btn-section-inside-arrow {
+		&:hover .btn-section-arrow {
 			color: $bgcAndText;
 		}
 	}
 	.section--white-btn {
-		&:hover &-inside {
+		&:hover{
 			background-color: $headingAndBtnText;
+			color: $bgcAndText;
+			outline: none;
 		}
-		&:hover &-inside,
 		&:hover .fa-arrow-right-long {
 			color: $bgcAndText;
-		}
-		&:hover {
-			outline: none;
 		}
 	}
 	.section-background-gradient {

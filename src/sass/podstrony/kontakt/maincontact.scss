@@ -7,19 +7,6 @@
 	margin-top: 5em;
 	position: relative;
 
-	.contact--background-gradient {
-		position: absolute;
-		position: absolute;
-		top: 20%;
-		left: -10%;
-		width: 50%;
-		height: 50%;
-		transform: rotate(43.387deg);
-		border-radius: 778px;
-		background: rgba(88, 209, 179, 0.2);
-		filter: blur(75px);
-		z-index: -10;
-	}
 	&__container {
 		&--title {
 			display: flex;
@@ -62,19 +49,17 @@
 						font-size: 1.4rem;
 						pointer-events: none;
 					}
-					& input:focus ~ label {
-						transform: translateY(-150%);
-						color: $headingAndBtnText;
-						background-color: #d4f7ee;
-					}
-					& input:valid ~ label {
-						transform: translateY(-150%);
-						background-color: #d4f7ee;
-					}
+					& input:focus ~ label,
+					& input:valid ~ label,
 					.active-email-label {
-						transform: translateY(-150%);
+						transform: translateY(-150%) scale(0.9);
 						background-color: #d4f7ee;
 					}
+
+					& input:focus ~ label {
+						color: $headingAndBtnText;
+					}
+
 					& textarea {
 						max-width: 100%;
 						min-height: 100px;
@@ -83,12 +68,12 @@
 							left: 7px;
 						}
 						&:focus ~ label {
-							transform: translateY(-22px);
+							transform: translateY(-22px) scale(0.9);
 							color: $headingAndBtnText;
 							background-color: #d4f7ee;
 						}
 						&:valid ~ label {
-							transform: translateY(-22px);
+							transform: translateY(-22px) scale(0.9);
 							background-color: #d4f7ee;
 						}
 					}
@@ -201,6 +186,23 @@
 			visibility: visible;
 		}
 	}
+	.contact--background-gradient {
+		position: absolute;
+		top: 20%;
+		left: -10%;
+		width: 50%;
+		height: 50%;
+		transform: rotate(43.387deg);
+		border-radius: 778px;
+		background: rgba(88, 209, 179, 0.2);
+		filter: blur(75px);
+		z-index: -10;
+	}
+	.section--white-btn {
+		width: 100%;
+		font-family: 'Montserrat', sans-serif;
+		border: none;
+	}
 }
 
 @media (min-width: 576px) {
@@ -236,9 +238,7 @@
 							font-size: 1.6rem;
 						}
 						& input:focus ~ label {
-							transform: translateY(-140%);
-							color: $headingAndBtnText;
-							background-color: #d4f7ee;
+							transform: translateY(-140%) scale(0.9);
 						}
 					}
 				}
@@ -254,18 +254,8 @@
 							align-self: auto;
 						}
 					}
-					.section--white-btn-inside {
+					.section--white-btn {
 						width: auto;
-						&:hover {
-							background-color: $headingAndBtnText;
-						}
-						&:hover,
-						&:hover .fa-arrow-right-long {
-							color: $bgcAndText;
-						}
-						&:hover {
-							outline: none;
-						}
 					}
 				}
 			}

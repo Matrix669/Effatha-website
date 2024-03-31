@@ -3,6 +3,9 @@
 @use '../../resetstyles' as *;
 @use '../../main.scss' as *;
 
+body {
+	overflow: hidden;
+}
 .data-bank {
 	margin-top: 5em;
 	&__container {

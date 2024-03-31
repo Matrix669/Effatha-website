@@ -56,7 +56,6 @@
 						font-size: 1.6rem;
 						border-radius: 6px;
 						box-shadow: -10px 25px 60px -10px;
-						cursor: pointer;
 						transition: box-shadow 0.3s, color 0.3s;
 						cursor: pointer;
 						&:hover {
@@ -153,8 +152,11 @@
 						}
 					}
 				}
-				&:hover {
+				&:hover,
+				&:hover .events__slider-container-box-text--btn{
 					transform: scale(1.025);
+					color: $dateAndSquare;
+
 				}
 			}
 		}
