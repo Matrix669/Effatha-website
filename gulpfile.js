@@ -11,7 +11,7 @@ const clean = require('gulp-clean')
 const kit = require('gulp-kit')
 const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
-const minifyPHP = require('gulp-minify-php')
+// const minifyPHP = require('gulp-minify-php')
 
 const paths = {
 	html: './html/**/*.kit',
@@ -87,7 +87,7 @@ function startBrowserSync(done) {
 
 function watchForChanges(done) {
 	watch('./*.html').on('change', reload) // w zależności czy będziemy pracować tylko z .kit, czy będziemy pracować z samym .html
-	watch([paths.html, paths.sass, paths.js, paths.php], parallel(handleKits, sassCompiler, javaScript, php)).on(
+	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript, php)).on(
 		'change',
 		reload
 	)
@@ -95,6 +95,6 @@ function watchForChanges(done) {
 	done()
 }
 
-const mainFunctions = parallel(handleKits, sassCompiler, javaScript, php, convertImages)
+const mainFunctions = parallel(handleKits, sassCompiler, javaScript, convertImages)
 exports.cleanStuff = cleanStuff
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges)
