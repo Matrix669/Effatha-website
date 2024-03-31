@@ -10,26 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
 		customDropdownBoxList.classList.toggle('active-dropdown-list')
 		customDropdownListItems.forEach(item => {
 			item.addEventListener('click', () => {
-                let selectedItem = item.innerText
-                customDropdownDefaultTitle.innerText = selectedItem
+				let selectedItem = item.innerText
+				customDropdownDefaultTitle.innerText = selectedItem
 
-                customDropdownBoxList.classList.remove('active-dropdown-list')
-            })
+				customDropdownBoxList.classList.remove('active-dropdown-list')
+			})
 		})
 	}
 
-
 	customDropdownBoxTitle.forEach(box => {
-        box.addEventListener('click', handleDropdown)
-    })
-    // document.addEventListener('click', e => {
-    //     if(customDropdownBoxList.classList.contains('active-dropdown-list') || e.target !== customDropdownBoxTitle) {
-    //         console.log('tak');
-    //         customDropdownBoxList.classList.remove('active-dropdown-list')
-    //     }
-    //     // if(!customDropdownBoxTitle.contains(e.target)) {
-    //     //     customDropdownBoxList.classList.remove('active-dropdown-list')
-    //     // }
-
-    // })
+		box.addEventListener('click', () => {
+			handleDropdown()
+			document.addEventListener('click', e => {
+				if (!box.contains(e.target) && e.target !== box) {
+					customDropdownBoxList.classList.remove('active-dropdown-list')
+				}
+			})
+		})
+	})
 })
