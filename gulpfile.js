@@ -87,7 +87,7 @@ function startBrowserSync(done) {
 
 function watchForChanges(done) {
 	watch('./*.html').on('change', reload) // w zależności czy będziemy pracować tylko z .kit, czy będziemy pracować z samym .html
-	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript, php)).on(
+	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on(
 		'change',
 		reload
 	)
