@@ -60,11 +60,23 @@ document.addEventListener('DOMContentLoaded', function() {
 				errorCount++
 			}
 		})
-        if(errorCount === 0) {
-            formSubmitMessage.classList.add('form-message-visible')
-        }
-	}
+        if(errorCount === 0 && document.location.search === '?mail_status=sent') {
+            formSubmitMessage.classList.add('form-message-visible--success')
+			formSubmitMessage.textContent = 'Wiadomość została wysłana!'
 
+			setTimeout(() => {
+				formSubmitMessage.classList.remove('form-message-visible--success')
+			}, 3000);
+        }
+		if (errorCount === 0 && document.location.search === '?mail_status=error') {
+			formSubmitMessage.classList.add('form-message-visible--error')
+			formSubmitMessage.textContent = 'Błąd z wysłaniem!'
+
+			setTimeout(() => {
+				formSubmitMessage.classList.remove('form-message-visible--error')
+			}, 3000);
+		}
+	}
 
 
     formSubmitBtn.addEventListener('click', e => {

@@ -101,8 +101,11 @@
 
 			&__agreement {
 				&--message {
-					font-size: 1.8rem;
+					display: inline-block;
 					margin-top: 1em;
+					padding: 1em 2em;
+					font-size: 1.6rem;
+					border-bottom-right-radius: 20px;
 					visibility: hidden;
 				}
 
@@ -125,7 +128,7 @@
 						appearance: none;
 						background-color: $headingAndBtnText;
 						border-radius: 4px;
-						width: 20px;
+						min-width: 20px;
 						height: 20px;
 						cursor: pointer;
 						&::after,
@@ -173,17 +176,23 @@
 						border-bottom: 1px solid $headingAndBtnText;
 					}
 				}
-				.section--white-btn-inside {
+				.section--white-btn {
 					width: 100%;
 					margin-top: 1.5em;
 				}
-				.section--white-btn-inside:hover {
-					outline: 1px solid $headingAndBtnText;
-				}
 			}
 		}
-		.form-message-visible {
+		.form-message-visible--success,
+		.form-message-visible--error {
 			visibility: visible;
+		}
+		.form-message-visible--success {
+			background-color: $headingAndBtnText;
+			color: $bgcAndText;
+		}
+
+		.form-message-visible--error {
+			background-color: tomato;
 		}
 	}
 	.contact--background-gradient {
@@ -218,6 +227,10 @@
 						width: 100%;
 					}
 				}
+			}
+			.form-message-visible--success,
+			.form-message-visible--error {
+				font-size: 1.8rem;
 			}
 		}
 	}
@@ -256,6 +269,7 @@
 					}
 					.section--white-btn {
 						width: auto;
+						margin-top: 0;
 					}
 				}
 			}

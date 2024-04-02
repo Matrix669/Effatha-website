@@ -11,18 +11,15 @@ const clean = require('gulp-clean')
 const kit = require('gulp-kit')
 const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
-// const minifyPHP = require('gulp-minify-php')
 
 const paths = {
 	html: './html/**/*.kit',
 	sass: './src/sass/**/*.scss',
 	js: './src/js/**/*.js',
-	// php: './src/php/**/*.php',
 	img: './src/img/*',
 	dist: './dist',
 	sassDest: './dist/css',
 	jsDest: './dist/js',
-	// phpDest: './dist/php',
 	imgDest: './dist/img',
 }
 
@@ -53,15 +50,6 @@ function javaScript(done) {
 		.pipe(dest(paths.jsDest))
 	done()
 }
-// function php(done) {
-// 	src(paths.php)
-// 		.pipe(sourcemaps.init())
-// 		.pipe(minifyPHP())
-// 		.pipe(rename({ suffix: '.min' }))
-// 		.pipe(sourcemaps.write())
-// 		.pipe(dest(paths.phpDest))
-// 	done()
-// }
 function convertImages(done) {
 	src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest))
 	done()
