@@ -16,7 +16,7 @@ $headers .= "Reply-To: " . $from . "\r\n";
 $mail_status = mail($to, $subject, $txt, $headers);
 
 if ($mail_status) {
-    header("Location: /podstrony/kontakt/index.html?mail_status=sent"); // jeśli formularz jest na stronie głównej, zmień na index.html
+    header("Location: /podstrony/kontakt/index.html?mail_status=sent");
 } else {
-    header("Location: /podstrony/kontakt/index.html?mail_status=error"); // jeśli formularz jest na stronie głównej, zmień na index.html
+    header("Location: /podstrony/kontakt/index.html?mail_status=error");
 }
