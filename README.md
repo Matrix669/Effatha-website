@@ -45,4 +45,4 @@ A website for the Effatha community in Gliwice. For now, it is under constructio
 
 ### Screenshots
 
-[mainpage-ss](./public/effatha-img.png)
+![mainpage-ss](./public/effatha-img.png)
