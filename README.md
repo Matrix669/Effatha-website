@@ -1,27 +1,44 @@
-## Uruchomienie
-Instalowanie paczek:  
-`npm i` / `npm install`  
+## Launch
 
-Uruchomienie strony:  
+Installing packages:
+`npm i / npm install`
+
+Running the site:
 `gulp`
 
+# Demo
+[text](https://matrix669.github.io/Effatha-website/)
 
-# Moje przemyślenia
-### Opis
-Strona dla wspólnoty Effatha z Gliwic. Póki co jest w budowie więc jeszcze trochę rzeczy brakuje. Później będzie on przerabiana na szablon za pomocą funkcji z php.
+## Progress
 
+![](https://geps.dev/progress/75)
 
-### Nauczyłem się:
-- odpowiednio dodawać wrappery. To znaczy, że jeśli sekcja ma nadany jakiś background to niekoliduje to z wrapperem. Jest na całej szerokości, a później jest treść
-- dodawać kosmetyczne rzeczy w tle: gradient
-- jeszcze lepiej zacządzać gulpem (kit)
-- tworzyć reusable komponenty w scss jak nav czy footer
-- odpowiednio rozdrabniać plik scss na komponenty
-- korzystać z gita:
-  - git add/commit
-  - git push -u origin master
-- dodać repo za pomocą ssh
+### Description
+
+A website for the Effatha community in Gliwice. For now, it is under construction, so some things are still missing. Later, it will be converted into a Wordpress template using PHP functions.
+
+### I have learned:
+
+- How to properly add wrappers. This means that if a section has a background assigned, it doesn't interfere with the wrapper. It spans the full width, and then - there's the content.
+- How to add cosmetic elements in the background: gradient.
+- To manage Gulp (Kit) even better.
+- To create reusable components in SCSS, like the nav or footer.
+- How to properly break down the SCSS file into components.
+- How to use Git:
+- git add/commit
+- git push -u origin master
+- How to add a repository via SSH.
 
 ### Problem:
-- zaimportowanie lokalnych czcionek - ogarnięte ✔
-- były problemy z ustawieniem tych kosmetycznych divów (gradienty). Trzeba było trochę popracować z odpowiednim ich umiejscowieniem, szerokością jak i wysokością
+
+- Importing local fonts - sorted out ✔
+- There were issues with positioning these cosmetic divs (gradients). It required some work to correctly place them, and set their width and height.
+
+### Todo:
+
+| | - Secure text for your own theme from WordPress.
+| | - Transform the entire structure of the website into your own WordPress theme.
+
+### Screenshots
+
+[](./public/effatha-img.png)
