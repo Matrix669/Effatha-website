@@ -7,7 +7,8 @@ Running the site:
 `gulp`
 
 # Demo
-[text](https://matrix669.github.io/Effatha-website/)
+
+[Effatha-website](https://matrix669.github.io/Effatha-website/)
 
 ## Progress
 
@@ -39,6 +40,8 @@ A website for the Effatha community in Gliwice. For now, it is under constructio
 | | - Secure text for your own theme from WordPress.
 
 | | - Transform the entire structure of the website into your own WordPress theme.
+
+| | - Create animations when the page loads
 
 ### Screenshots
 
