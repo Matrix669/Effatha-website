@@ -37,6 +37,7 @@ A website for the Effatha community in Gliwice. For now, it is under constructio
 ### Todo:
 
 | | - Secure text for your own theme from WordPress.
+
 | | - Transform the entire structure of the website into your own WordPress theme.
 
 ### Screenshots
